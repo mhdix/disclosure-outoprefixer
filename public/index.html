@@ -5,36 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>disclosure</title>
     <link rel="stylesheet" href="build/tailwind.css">
+    <link rel="preconnect" href="//fdn.fontcdn.ir"><link rel="preconnect" href="//v1.fontapi.ir"><link href="https://v1.fontapi.ir/css/Vazir" rel="stylesheet">
 </head>
-<body class="bg-blue-900 flex justify-center items-center h-screen">
-    <div class="max-w-md bg-white rounded-xl p-4 w-full flex flex-col gap-y-4">
+<body class="bg-blue-900 flex justify-center items-center h-screen" dir="rtl">
+    <div class="max-w-md bg-white rounded-xl p-4 w-full flex flex-col gap-y-4" style="font-family: Vazir, sans-serif;" x-data="{tab : '0'}">
         <!-- accordion NO.1 -->
-         <div class="" x-data="{tabOne : false}">
+         <div class="">
             <!-- header -->
-            <div @click="tabOne = !tabOne" class="bg-blue-600 text-white px-4 p-4 rounded-lg cursor-pointer flex justify-between items-center">
-                <span>what is refound policy</span>
-                <svg :class="tabOne ? 'rotate-180' : '' " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 transition-all duration-700">
+            <div @click="tab = '1'" class="bg-blue-600 text-white px-4 p-4 rounded-lg cursor-pointer flex justify-between items-center">
+                <span>حریم خصوصی و داده ها</span>
+                <svg :class="tab == '1' ? 'rotate-180' : '' " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 transition-all duration-700">
                     <path fill-rule="evenodd" d="M9.47 6.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 8.06l-3.72 3.72a.75.75 0 0 1-1.06-1.06l4.25-4.25Z" clip-rule="evenodd" />
-                  </svg>
+                </svg>
                              
             </div>
             <!-- content -->
-             <div  class="pt-2 px-4" x-show="tabOne">
-                fhdjlfhlsldjk fhsjd hfslkd jksd lskd hjfldj fljds hlshdflnrjlgsfjlknl
+             <div  class="pt-2 px-4" x-show="tab === '1'">
+                ما متعهد به حفظ حریم خصوصی شما هستیم. اطلاعات شخصی که در این پروژه جمع آوری می شود، صرفا برای بهبود تجربه کاربری استفاده خواهد شدو تحت هیچ شرایطی به اشخاص نخواهد شد
              </div>
          </div>
          <!-- accordion NO.2 -->
-         <div class="" x-data="{ tabTwo : false }">
+         <div class="">
             <!-- header -->
-            <div @click="tabTwo = !tabTwo" class="bg-blue-600 text-white px-4 p-4 rounded-lg cursor-pointer flex justify-between items-center">
-                <span>what is refound policy</span>
-                <svg :class="tabTwo ? 'rotate-180' : '' " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 transition-all duration-700">
+            <div @click="tab = '2'" class="bg-blue-600 text-white px-4 p-4 rounded-lg cursor-pointer flex justify-between items-center">
+                <span>شرایط استفاده</span>
+                <svg :class="tab === '2' ? 'rotate-180' : '' " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 transition-all duration-700">
                     <path fill-rule="evenodd" d="M9.47 6.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 8.06l-3.72 3.72a.75.75 0 0 1-1.06-1.06l4.25-4.25Z" clip-rule="evenodd" />
                 </svg>                               
             </div>
             <!-- content -->
-             <div  class="pt-2 px-4" x-show="tabTwo">
-                fhdjlfhlsldjk fhsjd hfslkd jksd lskd hjfldj fljds hlshdflnrjlgsfjlknl
+             <div  class="pt-2 px-4" x-show="tab === '2'">
+                با استفاده از این پروژه، شما موافقت میکنید. لطفا قبل از استفاده، این شرایط را به دقت مطالعه کنید.
              </div>
          </div>
     </div>
